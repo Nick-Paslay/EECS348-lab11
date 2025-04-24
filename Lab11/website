@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        form {
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>HTML Test Page</h1>
+</header>
+
+<div>
+    <form id="testForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+</div>
+
+<h2>Test Table</h2>
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+    </tr>
+    <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+    </tr>
+    <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+        <td>jane@example.com</td>
+    </tr>
+</table>
+
+<script>
+    function submitForm() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+
+        if (name && email) {
+            alert(`Name: ${name}\nEmail: ${email}`);
+        } else {
+            alert('Please fill in both fields.');
+        }
+    }
+</script>
+
+</body>
+</html>
